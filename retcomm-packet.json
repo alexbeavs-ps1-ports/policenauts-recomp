@@ -1,0 +1,107 @@
+{
+  "format_version": 1,
+  "id": "policenauts-psx",
+  "name": "Policenauts",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "policenauts-recomp",
+  "rom_identity": {
+    "crc32": [
+      "0db7d7e8",
+      "272ca545"
+    ],
+    "md5": [
+      "65977ae8b63042475730e6efb6a5a8a6",
+      "3b6bf3ce8230da37b8a717b6e892b457"
+    ],
+    "sha1": [
+      "3aa1fe0f2175dee26f66175de2a1ffe6d385ee95",
+      "e23d6395e0761e170bce24686c4eda289c159319"
+    ],
+    "disc_serials": [
+      "SLPS-00215",
+      "SLPS-00216"
+    ],
+    "sizes": [
+      748928544,
+      613822608
+    ],
+    "filenames": [
+      "Policenauts (T).cue",
+      "Policenauts (T).bin",
+      "Policenauts (T) (Disc 2).cue",
+      "Policenauts (T) (Disc 2).bin"
+    ],
+    "track_counts": [
+      1,
+      1
+    ],
+    "disc_fps": [
+      "8bb266554f88a9f57686c88d425d346f659cf0bc2a191cb3952e74963bc666b8",
+      "7ce151f729057324ce0593a0aabf4264a97cb8a9adc309e3232eab5386df170d"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5500.BIN",
+    "profile": "SCPH5500",
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/policenauts-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "policenauts-*-windows-x64.zip",
+      "linux-x64": "policenauts-*-linux-x64.zip",
+      "macos-arm64": "policenauts-*-macos-arm64.zip",
+      "macos-x64": "policenauts-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "policenauts.exe",
+    "linux": "policenauts",
+    "macos": "policenauts"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/policenauts-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

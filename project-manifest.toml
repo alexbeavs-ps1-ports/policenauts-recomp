@@ -1,0 +1,61 @@
+[project]
+title = "Policenauts"
+region = "Japan"
+revision = "serial-bound source; retail revision not separately labeled"
+track = "recompilation"
+intended_audience = "player"
+commercial_use_possible = false
+representative_level = "census scaffold build exit 0 on pin-j-v0.1.8; startup and gameplay not claimed"
+
+[retail_identity]
+disc_count = 2
+serials = ["SLPS-00215", "SLPS-00216"]
+executable_paths = ["disc/SLPS_002.15", "disc/SLPS_002.16"]
+executable_sha256 = "1f3dd85a32e35fb1a036b1836564d403a22656bcfbae70f746b79ec0498c33ff"
+exe_name = "policenauts"
+load_address = "0x80010000"
+entry_point = "0x800127B4"
+
+[framework]
+name = "PSXRecomp"
+repository = "https://github.com/Alexbeav/psxrecomp.git"
+commit = "6e8cf2ac631740db6bff1ee310f07cfa453fecfb"
+tree = "a9f71c725f3e037fb36a57d8e4a9d7e9de0c2df5"
+recomp_ui_commit = "1f79bfeaa6d4cf6aaa7d55ce9a54dea36fb98f35"
+license = "See the pinned dependency license; this binding does not approve commercial use."
+
+[release_binding]
+source_commit = ""
+current_title_version = "0.1.0"
+current_public_topology = "owned-input-kit-only"
+current_public_release = "none"
+current_package_platform = "none-promoted"
+manual_test = "pending-new-exact-package"
+linux_qualification = "pending-exact-package-and-native-test"
+macos_qualification = "testing-waived-by-alex-2026-09-14; packaging-gates-still-apply"
+publication = "preparatory; public publication is a separate approval"
+retcomm_submission = "not-authorized"
+
+[limits]
+maximum_local_generated_gib = 20
+maximum_single_trace_gib = 8
+
+[paths]
+local_context = ".local-context"
+generated = "generated"
+captures = "out/captures"
+traces = "out/traces"
+packages = "dist"
+
+[release]
+version = "0.1.0"
+platform = "multi-platform"
+supported_platforms = ["windows-x64", "linux-x64", "macos-arm64", "macos-x64"]
+graduation_state = "bootstrap_verified"
+public_package_status = "not-published"
+
+[bios]
+required = true
+profile = "SCPH5500"
+size = 524288
+sha256 = "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"

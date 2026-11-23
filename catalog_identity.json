@@ -1,0 +1,75 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Policenauts",
+    "id": "SLPS-00215",
+    "boot_exe": "SLPS_002.15"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Japan",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Policenauts (T).cue",
+    "bin_name": "Policenauts (T).bin",
+    "track_counts": [
+      1,
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 748928544,
+      "md5": "65977ae8b63042475730e6efb6a5a8a6",
+      "sha1": "3aa1fe0f2175dee26f66175de2a1ffe6d385ee95",
+      "crc32": "0db7d7e8"
+    },
+    "disc_fp": "8bb266554f88a9f57686c88d425d346f659cf0bc2a191cb3952e74963bc666b8",
+    "discs": [
+      {
+        "index": 1,
+        "cue_name": "Policenauts (T).cue",
+        "bin_name": "Policenauts (T).bin",
+        "size": 748928544,
+        "md5": "65977ae8b63042475730e6efb6a5a8a6",
+        "sha1": "3aa1fe0f2175dee26f66175de2a1ffe6d385ee95",
+        "crc32": "0db7d7e8",
+        "track_count": 1,
+        "serial": "SLPS-00215",
+        "disc_fp": "8bb266554f88a9f57686c88d425d346f659cf0bc2a191cb3952e74963bc666b8"
+      },
+      {
+        "index": 2,
+        "cue_name": "Policenauts (T) (Disc 2).cue",
+        "bin_name": "Policenauts (T) (Disc 2).bin",
+        "size": 613822608,
+        "md5": "3b6bf3ce8230da37b8a717b6e892b457",
+        "sha1": "e23d6395e0761e170bce24686c4eda289c159319",
+        "crc32": "272ca545",
+        "track_count": 1,
+        "serial": "SLPS-00216",
+        "disc_fp": "7ce151f729057324ce0593a0aabf4264a97cb8a9adc309e3232eab5386df170d"
+      }
+    ]
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800127B4",
+    "text_size": "0x00023800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 388,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

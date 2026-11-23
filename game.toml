@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Policenauts"
+id = "SLPS-00215"
+players = 1
+exe = "disc/SLPS_002.15"
+disc = "disc/Policenauts (T).cue"
+discs = ["disc/Policenauts (T).cue", "disc/Policenauts (T) (Disc 2).cue"]
+disc_serials = ["SLPS-00215", "SLPS-00216"]
+load_address = "0x80010000"
+entry_pc = "0x800127B4"
+text_size = "0x00023800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Policenauts (T).bin"
+cue_name = "Policenauts (T).cue"
+boot_exe = "SLPS_002.15"
+known_sizes = [748928544]
+known_md5 = [
+  "65977ae8b63042475730e6efb6a5a8a6",
+]
+known_sha1 = [
+  "3aa1fe0f2175dee26f66175de2a1ffe6d385ee95",
+]
+known_crc32 = [
+  "0db7d7e8",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5500.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Policenauts Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "8bb266554f88a9f57686c88d425d346f659cf0bc2a191cb3952e74963bc666b8"
